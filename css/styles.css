@@ -96,19 +96,22 @@ hr {
   margin: auto;
 }
 .skill-row {
-  margin: 100px auto;
+  margin: 200px auto;
   width: 50%;
   text-align: left;
-
-
 }
 .skill-p1 {
-  width: 25%;
+  width: 20%;
   float: left;
   margin: 0 30px 0 0;
 }
 .skill-p2 {
-  width:25%;
+  width:20%;
+  float: right;
+  margin: 0 0 0 30px;
+}
+.skill-p3 {
+  width:20%;
   float: right;
   margin: 0 0 0 30px;
 }
