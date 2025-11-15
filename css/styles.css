@@ -160,3 +160,16 @@ hr {
   width: 40%;
   margin: 40px auto 60px;
 }
+
+/* Override text center for Projects area */
+.projects-section {
+  text-align: left !important;    /* 关键：覆盖上层的居中样式 */
+}
+
+.projects-section .showcase-row {
+  text-align: left !important;
+}
+
+.projects-section .showcase-words {
+  text-align: left !important;
+}
