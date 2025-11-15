@@ -161,15 +161,17 @@ hr {
   margin: 40px auto 60px;
 }
 
-/* Override text center for Projects area */
+/* Projects 整体居中 */
 .projects-section {
-  text-align: left !important;    /* 关键：覆盖上层的居中样式 */
+  width: 80%;
+  margin: 0 auto;        /* 整体居中 */
+  text-align: center;    /* 标题居中 */
 }
 
-.projects-section .showcase-row {
-  text-align: left !important;
-}
-
+/* 每个项目内部左对齐 */
 .projects-section .showcase-words {
-  text-align: left !important;
+  text-align: left;      /* 小项靠左 */
+  display: inline-block; /* 保持整体居中 + 内容左对齐最关键的一句！ */
+  width: 80%;            /* 可调，防止文字太宽 */
+  margin: 0 auto;
 }
