@@ -1,179 +1,1244 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
   <title>Jiayue Zhou</title>
+
+  <meta
+    name="description"
+    content="Jiayue Zhou is an AI application developer and prospective researcher interested in applied and interdisciplinary artificial intelligence."
+  />
+
+  <meta
+    name="keywords"
+    content="Jiayue Zhou, Artificial Intelligence, Machine Learning, Multimodal Learning, Embodied AI, Edge AI, AI Systems, Computer Vision"
+  />
+
+  <link rel="icon" href="favicon.ico" />
+
+  <style>
+    :root {
+      --background: #f7f8fb;
+      --surface: #ffffff;
+      --surface-secondary: #f0f3f8;
+      --text-primary: #162033;
+      --text-secondary: #566278;
+      --border: #dce3ed;
+      --accent: #315eea;
+      --accent-dark: #2448b9;
+      --accent-light: #edf2ff;
+      --shadow: 0 10px 32px rgba(34, 50, 84, 0.07);
+      --max-width: 1080px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text-primary);
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--accent-dark);
+      text-decoration: underline;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.25;
+    }
+
+    ul {
+      margin-top: 0;
+    }
+
+    .container {
+      width: min(calc(100% - 40px), var(--max-width));
+      margin: 0 auto;
+    }
+
+    /* Navigation */
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(220, 227, 237, 0.9);
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+    }
+
+    .navbar-inner {
+      min-height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .navbar-name {
+      color: var(--text-primary);
+      font-size: 1rem;
+      font-weight: 750;
+      letter-spacing: -0.01em;
+    }
+
+    .navbar-name:hover {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .navbar-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      font-size: 0.9rem;
+      font-weight: 550;
+    }
+
+    .navbar-links a {
+      color: var(--text-secondary);
+    }
+
+    .navbar-links a:hover {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    /* Hero */
+
+    .hero {
+      padding: 96px 0 78px;
+      background:
+        radial-gradient(
+          circle at 85% 15%,
+          rgba(49, 94, 234, 0.15),
+          transparent 32%
+        ),
+        linear-gradient(180deg, #ffffff 0%, var(--background) 100%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(220px, 0.55fr);
+      align-items: center;
+      gap: 64px;
+    }
+
+    .eyebrow {
+      margin-bottom: 12px;
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 750;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      margin-bottom: 16px;
+      font-size: clamp(2.8rem, 7vw, 5rem);
+      letter-spacing: -0.055em;
+    }
+
+    .hero-title {
+      margin-bottom: 20px;
+      font-size: clamp(1.15rem, 2.4vw, 1.45rem);
+      font-weight: 650;
+    }
+
+    .hero-description {
+      max-width: 740px;
+      margin-bottom: 30px;
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 18px;
+      border: 1px solid var(--accent);
+      border-radius: 8px;
+      background: var(--accent);
+      color: #ffffff;
+      font-size: 0.94rem;
+      font-weight: 650;
+    }
+
+    .button:hover {
+      background: var(--accent-dark);
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .button-secondary {
+      border-color: var(--border);
+      background: var(--surface);
+      color: var(--text-primary);
+    }
+
+    .button-secondary:hover {
+      border-color: var(--accent);
+      background: var(--accent-light);
+      color: var(--accent);
+    }
+
+    .initials-card {
+      width: 230px;
+      height: 230px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      justify-self: center;
+      border: 8px solid #ffffff;
+      border-radius: 50%;
+      background:
+        linear-gradient(
+          140deg,
+          var(--accent) 0%,
+          #6d89ef 55%,
+          #a7b8f7 100%
+        );
+      box-shadow: 0 20px 50px rgba(35, 55, 100, 0.18);
+      color: #ffffff;
+      font-size: 4.2rem;
+      font-weight: 750;
+      letter-spacing: -0.07em;
+    }
+
+    /* General sections */
+
+    section {
+      padding: 72px 0;
+      scroll-margin-top: 80px;
+    }
+
+    section:nth-of-type(even) {
+      background: var(--surface);
+    }
+
+    .section-heading {
+      margin-bottom: 12px;
+      font-size: clamp(1.9rem, 4vw, 2.55rem);
+      letter-spacing: -0.035em;
+    }
+
+    .section-intro {
+      max-width: 780px;
+      margin-bottom: 38px;
+      color: var(--text-secondary);
+    }
+
+    /* About */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.45fr) minmax(260px, 0.65fr);
+      gap: 48px;
+    }
+
+    .about-text p {
+      color: var(--text-secondary);
+    }
+
+    .focus-card {
+      padding: 25px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--surface-secondary);
+    }
+
+    .focus-card h3 {
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+
+    .focus-list {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--text-secondary);
+    }
+
+    .focus-list li + li {
+      margin-top: 8px;
+    }
+
+    /* Research themes */
+
+    .theme-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .theme-card {
+      padding: 25px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .theme-number {
+      display: inline-flex;
+      width: 34px;
+      height: 34px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      border-radius: 9px;
+      background: var(--accent-light);
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 750;
+    }
+
+    .theme-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.08rem;
+    }
+
+    .theme-card p {
+      margin-bottom: 0;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+
+    /* Projects */
+
+    .project-grid {
+      display: grid;
+      gap: 24px;
+    }
+
+    .project-card {
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .project-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 13px;
+    }
+
+    .project-header h3 {
+      margin-bottom: 0;
+      font-size: 1.22rem;
+    }
+
+    .project-date {
+      flex-shrink: 0;
+      color: var(--text-secondary);
+      font-size: 0.88rem;
+    }
+
+    .project-summary {
+      margin-bottom: 17px;
+      color: var(--text-secondary);
+    }
+
+    .project-list {
+      margin-bottom: 0;
+      padding-left: 21px;
+      color: var(--text-secondary);
+    }
+
+    .project-list li + li {
+      margin-top: 7px;
+    }
+
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 19px;
+      font-size: 0.91rem;
+      font-weight: 650;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 20px;
+    }
+
+    .tag {
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: var(--accent-light);
+      color: #294ab4;
+      font-size: 0.8rem;
+      font-weight: 650;
+    }
+
+    /* Additional projects */
+
+    .additional-projects {
+      margin-top: 28px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--surface);
+    }
+
+    .additional-projects summary {
+      padding: 20px 24px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .additional-projects-content {
+      padding: 0 24px 24px;
+    }
+
+    .compact-project {
+      padding: 18px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .compact-project h3 {
+      margin-bottom: 7px;
+      font-size: 1rem;
+    }
+
+    .compact-project p {
+      margin-bottom: 8px;
+      color: var(--text-secondary);
+      font-size: 0.94rem;
+    }
+
+    /* Timeline */
+
+    .timeline {
+      display: grid;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 185px minmax(0, 1fr);
+      gap: 26px;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .timeline-item:first-child {
+      padding-top: 0;
+    }
+
+    .timeline-date {
+      color: var(--text-secondary);
+      font-size: 0.88rem;
+    }
+
+    .timeline-content h3 {
+      margin-bottom: 4px;
+      font-size: 1.08rem;
+    }
+
+    .organization {
+      margin-bottom: 9px;
+      font-weight: 650;
+    }
+
+    .timeline-content p:last-child {
+      margin-bottom: 0;
+      color: var(--text-secondary);
+    }
+
+    /* Skills */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .skill-card {
+      padding: 23px;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      background: var(--surface);
+    }
+
+    .skill-card h3 {
+      margin-bottom: 9px;
+      font-size: 1rem;
+    }
+
+    .skill-card p {
+      margin-bottom: 0;
+      color: var(--text-secondary);
+    }
+
+    /* Honors */
+
+    .honor-card {
+      padding: 25px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .honor-card h3 {
+      margin-bottom: 7px;
+      font-size: 1.08rem;
+    }
+
+    .honor-card p {
+      margin-bottom: 0;
+      color: var(--text-secondary);
+    }
+
+    /* Contact */
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact .section-intro {
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .center-actions {
+      justify-content: center;
+    }
+
+    /* Footer */
+
+    footer {
+      padding: 28px 0;
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text-secondary);
+      text-align: center;
+      font-size: 0.88rem;
+    }
+
+    footer p {
+      margin-bottom: 0;
+    }
+
+    /* Responsive */
+
+    @media (max-width: 880px) {
+      .hero-grid,
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .initials-card {
+        order: -1;
+        width: 180px;
+        height: 180px;
+        font-size: 3.3rem;
+      }
+
+      .theme-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .container {
+        width: min(calc(100% - 28px), var(--max-width));
+      }
+
+      .navbar-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 13px 0;
+      }
+
+      .navbar-links {
+        gap: 12px;
+      }
+
+      .hero {
+        padding: 62px 0 56px;
+      }
+
+      section {
+        padding: 56px 0;
+      }
+
+      .project-header {
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
-<link rel="stylesheet" href="css/styles.css">
-<link rel="icon" href="favicon.ico">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
 
 <body>
-  <div class="top-container">
-    <img class="top-cloud" src="images/cloud.png" alt="cloud-img">
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="container navbar-inner">
+      <a class="navbar-name" href="#home">Jiayue Zhou</a>
 
-    <h1>I'm Jiayue(Jerry)</h1>
-    <h2>
-        An explorer, and an engineer.
-    </h2>
-    <img class="bottom-cloud" src="images/cloud.png" alt="cloud-img">
-    <img src="images/mountain.png" alt="cloud-img">
-  </div>
-  <div class="middle-container">
-    <div class="profile">
-      <img class="my-profile" src="images/myProfile-modified.png" alt="my-profile">
-      <h2>Hello.</h2>
-      <p class="intro">
-        My current interest varies from artificial intelligence, blockchain and web3, web development, and software engineering.
-<br />
-    </div>
-    <hr class="hr">
-    <div class="skills">
-      <h2>My Skills.</h2>
-      <div class="skill-row">
-        <img class="skill-p1" src="images/computer.png" alt="skill-p1">
-        <h3 class="substitle">Machine Learning and Deep Learning</h3>
-        <p>PyTorch, TensorFlow, Numpy, Pandas</p>
-      </div>
-      <div class="skill-row">
-        <img class="skill-p2" src="images/chillies.png" alt="skill-p2">
-        <h3 class="substitle">Web Development</h3>
-        <p>Next.js, Tailwind CSS, Flask(Python), SpringBoot(Java)</p>
-      </div>
-      <div class="skill-row">
-        <img class="skill-p3" src="images/Bitcoin.svg.png" alt="skill-p3">
-        <h3 class="substitle">Crypto and Web3</h3>
-        <p>Solidity</p>
+      <div class="navbar-links">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
       </div>
     </div>
-    <hr>
+  </nav>
 
-<h2>Projects</h2>
-<div class="projects-section">
-  <!-- Bitpush -->
-  <div class="showcase-row">
-    <p class="showcase-words">
-      <strong>Bitpush (Web3 Platform)</strong>
-      <br /><br />
-      • Developed responsive event pages and modal components using <strong>React</strong> and <strong>Next.js</strong>.<br />
-      • Rebuilt forum UI using Vue and Nuxt.js.<br />
-      • Implemented front-end business logic to improve UX and maintainability.<br />
-      • Styled the interface with <strong>Tailwind CSS</strong>.
-    </p>
-  </div>
-  
-  <!-- VQA -->
-  <div class="showcase-row">
-    <p class="showcase-words">
-      <strong>Visual Question Answering (VQA) Application</strong> —
-      <a href="https://tinyurl.com/VQAApplicationGitHub" target="_blank">GitHub Link</a>
-      <br /><br />
-      • Developed an AI application that answers natural-language questions based on input images using PyTorch and GPU-accelerated Linux servers.<br />
-      • Implemented ResNet for image feature extraction and GloVe + LSTM for language preprocessing.<br />
-      • Built deep learning models (512 hidden units) achieving <strong>96.95% test accuracy</strong>.<br />
-      • Deployed the entire system as a <strong>Flask-based web application</strong>.
-    </p>
-  </div>
+  <header class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <p class="eyebrow">AI Engineering · Interdisciplinary Research</p>
 
-  <!-- RideNShare -->
-  <div class="showcase-row">
-    <p class="showcase-words">
-      <strong>Ride N Share — Ridesharing Web Platform</strong> —
-      <a href="https://github.com/Jiayue-Zhou/RideNShare" target="_blank">GitHub Link</a>
-      <br /><br />
-      • Created a web-based platform providing ridesharing information for students.<br />
-      • Built the frontend using JavaScript + Vue.js with animated login & sign-up UI.<br />
-      • Implemented backend authentication using <strong>Java</strong>, <strong>Spring Boot</strong> and <strong>MySQL</strong>.<br />
-      • Built email verification with JavaMailSender.
-    </p>
-  </div>
+        <h1>Jiayue Zhou</h1>
 
-  <!-- Blockchain Medical Record System -->
-  <div class="showcase-row">
-    <p class="showcase-words">
-      <strong>Decentralized Patients Record System</strong> —
-      <a href="https://tinyurl.com/PatientsRecordsSystemGitHub" target="_blank">GitHub Link</a>
-      <br /><br />
-      • Built an Ethereum-based decentralized medical records system using Solidity.<br />
-      • Integrated a Python full-stack app to display AI COVID predictions and update patient data.<br />
-      • Developed <strong>Web3.py</strong> modules for reliable on-chain/off-chain interaction.<br />
-      • Implemented a Python ML model to predict COVID-19 outcomes.
-    </p>
-  </div>
-
-  <!-- Cancer Classification -->
-  <div class="showcase-row">
-    <p class="showcase-words">
-      <strong>Breast Cancer Subtype Classification — BP Neural Network</strong> —
-      <a href="https://tinyurl.com/paperForML" target="_blank">Project Report</a>
-      <br /><br />
-      • Conducted breast cancer subtype classification using BP neural networks.<br />
-      • Used <strong>Pandas</strong>, <strong>Numpy</strong> for computation, <strong>Keras</strong> + <strong>TensorFlow</strong> for training, and sklearn for evaluation.<br />
-      • Implemented MFO (Moth-Flame Optimizer) for parameter initialization.
-    </p>
-  </div>
-
-</div>
-
-
-    <div class="showcase">
-      <h2>Showcase</h2>
-      <div class="showcase-row">
-        <img class="show-pic" src="images/rideNshare.png" alt="rideNshare">
-        <p class="showcase-words">
-          The project is currently available on <a href="https://github.com/Jiayue-Zhou/RideNShare" target="_blank">here</a>. For VT students, you can use your email to sign up and have a full experience!
-          <br />
-          <br />
-          I designed the database schemas(MySQL) as well as the authentication(login and sign up) logic with Java and Spring Boot implementation.
-          Also, I use Vue.js, HTML, CSS and JavaScript to achieve the front end of the homepage and the pop-out windows of sign-in and sign-up.
-          The project is managed by Scrum.
+        <p class="hero-title">
+          AI Application Developer and Prospective Researcher
         </p>
-      </div>
-        <div class="showcase-row">
-        <img class="show-pic" src="images/amotions.png" alt="amotions">
-        <p class="showcase-words">
-          <strike>Still on working!</strike> I have wrapped up my internship! You can click <a href="https://www.amotionsinc.com/" target="_blank">here</a> to see the up-to-date version of the work.
-          <br />
-          <br />
-          As a software engineer intern of <a href="https://www.linkedin.com/company/amotions/">Amotions</a>, I contributed a lot to the new webisite of Amotions.
-          The team is using Next.js/TypeScript/Chakra UI/React.js to build the dashboard of the website, and Chakra UI/CSS for front-end development.
+
+        <p class="hero-description">
+          I am a computer science graduate from Virginia Tech with experience
+          in AI application development, machine learning, multimodal systems,
+          backend engineering, and research-oriented technical projects. I am
+          interested in applied and interdisciplinary AI research that connects
+          intelligent models and systems with real-world problems.
         </p>
+
+        <div class="hero-actions">
+          <a class="button" href="mailto:jiayuez@vt.edu">
+            Contact Me
+          </a>
+
+          <a
+            class="button button-secondary"
+            href="https://github.com/Jiayue-Zhou"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+
+          <!--
+          Upload your CV to the materials folder and uncomment this button.
+
+          <a
+            class="button button-secondary"
+            href="materials/Jiayue_Zhou_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View CV
+          </a>
+          -->
+        </div>
       </div>
-      <div class="showcase-row">
-        <img class="show-pic" src="images/patients-record-system1.png" alt="patients-record-system">
-        <p class="showcase-words">
-          Record data to blockchain using Web3.py and use Solidity to build the smart contract. Also, with Flask and Vue.js, this applicaton has a
-          web page. Metamask is supported on this page.
-          You can click <a href="https://github.com/Jiayue-Zhou/A-Blockchain-Based-Medical-Record-System-incorporated-with-Deep-Learning" target="_blank">here</a>
-          to see the open-source Github Repository.
-        </p>
+
+      <div class="initials-card" aria-label="Jiayue Zhou initials">
+        JZ
       </div>
     </div>
+  </header>
 
-    <hr>
-    <div class="contact-me">
-      <h2>Get In Touch</h2>
-      <h3>Explore the world with me.</h3>
-      <!-- <p class="contact-message">I am looking for opportunities for software/web development engineer positions.
-        And I will be able to start a full-time job from July 2023.</p> -->
-        <a class="" href="https://www.linkedin.com/in/jiayuezhou/" target="_blank">LinkedIn</a>
-        <a class="" href="https://github.com/Jiayue-Zhou" target="_blank">Github</a>
-        <br /> OR
-      <a class="btn" href="mailto:jiayuezhou69@gmail.com" target="_blank">CONTACT ME BY EMAIL</a>
+  <main>
+    <section id="about">
+      <div class="container">
+        <h2 class="section-heading">About Me</h2>
+
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              I received my Master of Engineering in Computer Science and
+              Applications from Virginia Tech, where I graduated with a GPA of
+              3.90. I earned my Bachelor of Engineering in Computer Science
+              from Hangzhou Dianzi University, where I studied in the Honors
+              College.
+            </p>
+
+            <p>
+              My background combines software engineering, AI application
+              development, machine learning projects, multimodal systems, and
+              backend infrastructure. I currently work on AI-powered
+              applications and multi-stage generation pipelines, including API
+              development, databases, asynchronous processing, testing, and
+              deployment.
+            </p>
+
+            <p>
+              My academic project experience includes visual question
+              answering, neural networks, mathematical modeling, optimization,
+              literature-based research, and technical report writing.
+            </p>
+
+            <p>
+              I am broadly interested in applied and interdisciplinary AI
+              research. I enjoy connecting ideas across different technical and
+              application domains, building experimental systems, and exploring
+              how AI can interact with people, environments, devices, and
+              real-world processes.
+            </p>
+
+            <p>
+              I value independent learning, careful implementation,
+              reproducibility, collaboration, and academic integrity. I am
+              currently exploring research assistant, research internship,
+              visiting student, and future PhD opportunities.
+            </p>
+          </div>
+
+          <aside class="focus-card">
+            <h3>What I Bring</h3>
+
+            <ul class="focus-list">
+              <li>Strong Python and software engineering experience</li>
+              <li>AI application and backend system development</li>
+              <li>Multimodal and machine learning project experience</li>
+              <li>Experimental implementation and prototyping</li>
+              <li>Broad interdisciplinary curiosity</li>
+              <li>Self-directed and responsible working style</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="container">
+        <h2 class="section-heading">Research Themes</h2>
+
+        <p class="section-intro">
+          My interests are evolving around three broad themes. These themes
+          reflect the kinds of problems I would like to explore rather than a
+          claim of established expertise in every area.
+        </p>
+
+        <div class="theme-grid">
+          <article class="theme-card">
+            <span class="theme-number">01</span>
+
+            <h3>Intelligent Models and Multimodal AI</h3>
+
+            <p>
+              Generative models, multimodal learning, computer vision, language
+              models, spatial reasoning, world representations, and systems
+              that integrate information across multiple modalities.
+            </p>
+          </article>
+
+          <article class="theme-card">
+            <span class="theme-number">02</span>
+
+            <h3>Embodied, Spatial, and Edge Intelligence</h3>
+
+            <p>
+              Embodied AI, robotics, world models, physical AI, edge
+              intelligence, neuromorphic computing, and intelligent systems
+              that perceive or operate in physical environments.
+            </p>
+          </article>
+
+          <article class="theme-card">
+            <span class="theme-number">03</span>
+
+            <h3>Applied and Human-Centered AI Systems</h3>
+
+            <p>
+              AI systems for education and other real-world domains, including
+              human–AI interaction, reliable AI pipelines, evaluation,
+              experimental platforms, and research prototyping.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+       <h2 class="section-heading">Selected AI and Technical Projects</h2>
+
+        <p class="section-intro">
+          Selected projects demonstrating my experience in AI systems,
+          multimodal learning, model implementation, and technical
+          prototyping.
+        </p>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-header">
+              <h3>EduOnAI: AI-Powered Course Generation System</h3>
+              <span class="project-date">February 2026 – Present</span>
+            </div>
+
+            <p class="project-summary">
+              An AI-powered platform that transforms user requirements into
+              structured course outlines, lesson content, and multiple course
+              asset formats.
+            </p>
+
+            <ul class="project-list">
+              <li>
+                Built a multi-stage LLM workflow for requirement analysis,
+                curriculum generation, lesson writing, CourseSpec assembly, and
+                course asset rendering.
+              </li>
+
+              <li>
+                Designed and implemented backend services using FastAPI,
+                Supabase Postgres, and the OpenAI API.
+              </li>
+
+              <li>
+                Developed asynchronous generation pipelines with Redis and RQ
+                for long-running AI generation and rendering tasks.
+              </li>
+
+              <li>
+                Added automated tests with pytest to improve reliability,
+                maintainability, and reproducibility.
+              </li>
+            </ul>
+            <div class="project-links">
+              <a
+                href="https://eduonai.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Visit EduOnAI Website →
+              </a>
+            </div>
+            <div class="tag-list">
+              <span class="tag">LLM Pipelines</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Redis/RQ</span>
+              <span class="tag">OpenAI API</span>
+              <span class="tag">pytest</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <h3>Visual Question Answering Application</h3>
+              <span class="project-date">December 2019 – June 2020</span>
+            </div>
+
+            <p class="project-summary">
+              A multimodal deep learning application that answers
+              natural-language questions based on images from the CLEVR
+              dataset.
+            </p>
+
+            <ul class="project-list">
+              <li>
+                Developed a multimodal model using PyTorch.
+              </li>
+
+              <li>
+                Used ResNet for visual feature extraction and GloVe with LSTM
+                for natural-language representation.
+              </li>
+
+              <li>
+                Trained and evaluated the model on GPU-accelerated Linux
+                servers, achieving 96.95% accuracy in the target project
+                evaluation setting.
+              </li>
+
+              <li>
+                Built an interactive web demonstration using Flask and HTML.
+              </li>
+            </ul>
+
+            <div class="project-links">
+              <a
+                href="https://github.com/Jiayue-Zhou/VQA-System-with-MAC-and-CLEVR"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View GitHub Repository →
+              </a>
+            </div>
+
+            <div class="tag-list">
+              <span class="tag">PyTorch</span>
+              <span class="tag">Multimodal Learning</span>
+              <span class="tag">ResNet</span>
+              <span class="tag">LSTM</span>
+              <span class="tag">GloVe</span>
+              <span class="tag">Flask</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <h3>
+                Breast Cancer Subtype Classification with Optimized Neural
+                Networks
+              </h3>
+
+              <span class="project-date">Spring 2022</span>
+            </div>
+
+            <p class="project-summary">
+              A graduate machine learning course research project on breast
+              cancer subtype classification using optimized backpropagation
+              neural networks and gene-expression data.
+            </p>
+
+            <ul class="project-list">
+              <li>
+                Participated in a team research project on breast cancer
+                subtype classification.
+              </li>
+
+              <li>
+                Implemented the Moth-Flame Optimization component for neural
+                network parameter initialization.
+              </li>
+            </ul>
+
+            <div class="project-links">
+              <a
+                href="https://jiayue-zhou.github.io/jiayue_personal_page/material/ML_final_report.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Read Course Paper →
+              </a>
+            </div>
+
+            <div class="tag-list">
+              <span class="tag">Neural Networks</span>
+              <span class="tag">Optimization</span>
+              <span class="tag">TensorFlow</span>
+              <span class="tag">Keras</span>
+            </div>
+          </article>
+        </div>
+
+        <details class="additional-projects">
+          <summary>Additional Engineering Projects</summary>
+
+          <div class="additional-projects-content">
+            <article class="compact-project">
+              <h3>Decentralized Patient Record System</h3>
+
+              <p>
+                Built an Ethereum-based patient record system using Solidity,
+                Web3.py, Python, and a web interface. Integrated a machine
+                learning component for COVID-related outcome prediction.
+              </p>
+
+              <a
+                href="https://github.com/Jiayue-Zhou/A-Blockchain-Based-Medical-Record-System-incorporated-with-Deep-Learning"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View GitHub Repository →
+              </a>
+            </article>
+
+            <article class="compact-project">
+              <h3>Ride N Share</h3>
+
+              <p>
+                Developed a student ridesharing web platform with Vue.js,
+                Spring Boot, MySQL, user authentication, and email
+                verification.
+              </p>
+
+              <a
+                href="https://github.com/Jiayue-Zhou/RideNShare"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View GitHub Repository →
+              </a>
+            </article>
+
+            <article class="compact-project">
+              <h3>Bitpush Web Platform</h3>
+
+              <p>
+                Developed responsive web features and user interfaces using
+                React, Next.js, Vue, Nuxt.js, and Tailwind CSS.
+              </p>
+            </article>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="container">
+        <h2 class="section-heading">Education</h2>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-date">
+              August 2021 – May 2023
+            </div>
+
+            <div class="timeline-content">
+              <h3>
+                Master of Engineering in Computer Science and Applications
+              </h3>
+
+              <p class="organization">
+                Virginia Polytechnic Institute and State University
+              </p>
+
+              <p>
+                Falls Church, Virginia · GPA: 3.90/4.00
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-date">
+              September 2016 – June 2020
+            </div>
+
+            <div class="timeline-content">
+              <h3>Bachelor of Engineering in Computer Science</h3>
+
+              <p class="organization">
+                Hangzhou Dianzi University
+              </p>
+
+              <p>
+                Hangzhou, China · GPA: 3.59/4.00 · Honors College
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container">
+        <h2 class="section-heading">Industry Experience</h2>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-date">
+              February 2026 – Present
+            </div>
+
+            <div class="timeline-content">
+              <h3>Computer Programmer</h3>
+
+              <p class="organization">
+                Washon MedData · Vienna, Virginia
+              </p>
+
+              <p>
+                Backend development, AI application development, database
+                design, API implementation, testing, deployment, and software
+                maintenance for company product systems.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-date">
+              October 2023 – January 2026
+            </div>
+
+            <div class="timeline-content">
+              <h3>Test Automation Engineer</h3>
+
+              <p class="organization">
+                Pax Technology · Jacksonville, Florida
+              </p>
+
+              <p>
+                Developed Python automation frameworks for Android payment
+                applications, improved regression test coverage, reduced
+                execution time, and strengthened software testing workflows.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-date">
+              June 2022 – August 2022
+            </div>
+
+            <div class="timeline-content">
+              <h3>Software Engineer Intern</h3>
+
+            <p class="organization">
+              Amotions, Inc. · Burlingame, California (Remote)
+            </p>
+
+              <p>
+                Built user-facing product features using Next.js, Chakra UI,
+                Firebase, and Netlify as part of a small product engineering
+                team.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <h2 class="section-heading">Technical Skills</h2>
+
+        <div class="skills-grid">
+          <article class="skill-card">
+            <h3>Programming</h3>
+            <p>Python, Java, SQL, JavaScript, C, and C++</p>
+          </article>
+
+          <article class="skill-card">
+            <h3>Machine Learning and AI</h3>
+
+            <p>
+              PyTorch, TensorFlow, Keras, scikit-learn, ResNet, LSTM,
+              multimodal learning, OpenAI API, and LLM pipelines
+            </p>
+          </article>
+
+          <article class="skill-card">
+            <h3>Backend and Data Systems</h3>
+
+            <p>
+              FastAPI, PostgreSQL, Supabase, MySQL, Redis, RQ, REST APIs,
+              database schema design, and asynchronous processing
+            </p>
+          </article>
+
+          <article class="skill-card">
+            <h3>Engineering and Research Prototyping</h3>
+
+            <p>
+              Git, Linux, Docker, pytest, model implementation, experimental
+              prototyping, automated testing, and reproducible software
+              development
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="honors">
+      <div class="container">
+        <h2 class="section-heading">Honors and Awards</h2>
+
+        <article class="honor-card">
+          <h3>
+            First Prize, Contemporary Undergraduate Mathematical Contest in
+            Modeling
+          </h3>
+
+          <p>Zhejiang Division, 2018</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2 class="section-heading">Get in Touch</h2>
+
+        <p class="section-intro">
+          I am open to conversations about research assistantships, research
+          internships, visiting student opportunities, future PhD study, and
+          interdisciplinary AI projects.
+        </p>
+
+        <div class="hero-actions center-actions">
+          <a class="button" href="mailto:jiayuez@vt.edu">
+            jiayuez@vt.edu
+          </a>
+
+          <a
+            class="button button-secondary"
+            href="https://github.com/Jiayue-Zhou"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>
+        © <span id="current-year"></span> Jiayue Zhou
+      </p>
     </div>
-  </div>
+  </footer>
 
-
-  <div class="bottom-container">
-    <a class="footer-link" href="https://www.linkedin.com/in/jiayuezhou/" target="_blank">LinkedIn</a>
-    <a class="footer-link" href="https://github.com/Jiayue-Zhou" target="_blank">Github</a>
-    <a class="footer-link" href="https://jiayue-zhou.github.io/jiayue_personal_page/">Website</a>
-    <p class="copyright">© 2024 Jiayue Zhou.</p>
-  </div>
-
+  <script>
+    document.getElementById("current-year").textContent =
+      new Date().getFullYear();
+  </script>
 </body>
-
 </html>
