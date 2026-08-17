@@ -2,24 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jiayue Zhou</title>
-
   <meta
     name="description"
-    content="Jiayue Zhou is an AI application developer and prospective researcher interested in applied and interdisciplinary artificial intelligence."
+    content="Jiayue Zhou is a software engineer and prospective researcher interested in software testing, AI for Software Engineering, software reliability, and intelligent software systems."
   />
-
   <meta
     name="keywords"
-    content="Jiayue Zhou, Artificial Intelligence, Machine Learning, Multimodal Learning, Embodied AI, Edge AI, AI Systems, Computer Vision"
+    content="Jiayue Zhou, Software Engineering, Software Testing, Flaky Tests, AI for Software Engineering, AI4SE, Test Automation, Software Reliability, LLM Agents, GUI Testing, Mobile Testing"
   />
-
   <link rel="icon" href="favicon.ico" />
 
   <style>
@@ -37,27 +29,16 @@
       --max-width: 1080px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
       background: var(--background);
       color: var(--text-primary);
-      font-family:
-        Inter,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Helvetica,
-        Arial,
-        sans-serif;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Helvetica, Arial, sans-serif;
       line-height: 1.65;
     }
 
@@ -71,29 +52,14 @@
       text-decoration: underline;
     }
 
-    h1,
-    h2,
-    h3,
-    p {
-      margin-top: 0;
-    }
-
-    h1,
-    h2,
-    h3 {
-      line-height: 1.25;
-    }
-
-    ul {
-      margin-top: 0;
-    }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2, h3 { line-height: 1.25; }
+    ul { margin-top: 0; }
 
     .container {
       width: min(calc(100% - 40px), var(--max-width));
       margin: 0 auto;
     }
-
-    /* Navigation */
 
     .navbar {
       position: sticky;
@@ -132,16 +98,12 @@
       font-weight: 550;
     }
 
-    .navbar-links a {
-      color: var(--text-secondary);
-    }
+    .navbar-links a { color: var(--text-secondary); }
 
     .navbar-links a:hover {
       color: var(--accent);
       text-decoration: none;
     }
-
-    /* Hero */
 
     .hero {
       padding: 96px 0 78px;
@@ -183,7 +145,7 @@
     }
 
     .hero-description {
-      max-width: 740px;
+      max-width: 760px;
       margin-bottom: 30px;
       color: var(--text-secondary);
       font-size: 1.05rem;
@@ -236,13 +198,12 @@
       justify-self: center;
       border: 8px solid #ffffff;
       border-radius: 50%;
-      background:
-        linear-gradient(
-          140deg,
-          var(--accent) 0%,
-          #6d89ef 55%,
-          #a7b8f7 100%
-        );
+      background: linear-gradient(
+        140deg,
+        var(--accent) 0%,
+        #6d89ef 55%,
+        #a7b8f7 100%
+      );
       box-shadow: 0 20px 50px rgba(35, 55, 100, 0.18);
       color: #ffffff;
       font-size: 4.2rem;
@@ -250,16 +211,12 @@
       letter-spacing: -0.07em;
     }
 
-    /* General sections */
-
     section {
       padding: 72px 0;
       scroll-margin-top: 80px;
     }
 
-    section:nth-of-type(even) {
-      background: var(--surface);
-    }
+    section:nth-of-type(even) { background: var(--surface); }
 
     .section-heading {
       margin-bottom: 12px;
@@ -268,12 +225,10 @@
     }
 
     .section-intro {
-      max-width: 780px;
+      max-width: 800px;
       margin-bottom: 38px;
       color: var(--text-secondary);
     }
-
-    /* About */
 
     .about-grid {
       display: grid;
@@ -281,9 +236,7 @@
       gap: 48px;
     }
 
-    .about-text p {
-      color: var(--text-secondary);
-    }
+    .about-text p { color: var(--text-secondary); }
 
     .focus-card {
       padding: 25px;
@@ -303,11 +256,7 @@
       color: var(--text-secondary);
     }
 
-    .focus-list li + li {
-      margin-top: 8px;
-    }
-
-    /* Research themes */
+    .focus-list li + li { margin-top: 8px; }
 
     .theme-grid {
       display: grid;
@@ -347,8 +296,6 @@
       color: var(--text-secondary);
       font-size: 0.95rem;
     }
-
-    /* Projects */
 
     .project-grid {
       display: grid;
@@ -393,9 +340,7 @@
       color: var(--text-secondary);
     }
 
-    .project-list li + li {
-      margin-top: 7px;
-    }
+    .project-list li + li { margin-top: 7px; }
 
     .project-links {
       display: flex;
@@ -421,8 +366,6 @@
       font-size: 0.8rem;
       font-weight: 650;
     }
-
-    /* Additional projects */
 
     .additional-projects {
       margin-top: 28px;
@@ -457,11 +400,7 @@
       font-size: 0.94rem;
     }
 
-    /* Timeline */
-
-    .timeline {
-      display: grid;
-    }
+    .timeline { display: grid; }
 
     .timeline-item {
       display: grid;
@@ -471,9 +410,7 @@
       border-bottom: 1px solid var(--border);
     }
 
-    .timeline-item:first-child {
-      padding-top: 0;
-    }
+    .timeline-item:first-child { padding-top: 0; }
 
     .timeline-date {
       color: var(--text-secondary);
@@ -494,8 +431,6 @@
       margin-bottom: 0;
       color: var(--text-secondary);
     }
-
-    /* Skills */
 
     .skills-grid {
       display: grid;
@@ -520,8 +455,6 @@
       color: var(--text-secondary);
     }
 
-    /* Honors */
-
     .honor-card {
       padding: 25px;
       border: 1px solid var(--border);
@@ -540,22 +473,14 @@
       color: var(--text-secondary);
     }
 
-    /* Contact */
-
-    .contact {
-      text-align: center;
-    }
+    .contact { text-align: center; }
 
     .contact .section-intro {
       margin-right: auto;
       margin-left: auto;
     }
 
-    .center-actions {
-      justify-content: center;
-    }
-
-    /* Footer */
+    .center-actions { justify-content: center; }
 
     footer {
       padding: 28px 0;
@@ -566,11 +491,7 @@
       font-size: 0.88rem;
     }
 
-    footer p {
-      margin-bottom: 0;
-    }
-
-    /* Responsive */
+    footer p { margin-bottom: 0; }
 
     @media (max-width: 880px) {
       .hero-grid,
@@ -601,17 +522,11 @@
         padding: 13px 0;
       }
 
-      .navbar-links {
-        gap: 12px;
-      }
+      .navbar-links { gap: 12px; }
 
-      .hero {
-        padding: 62px 0 56px;
-      }
+      .hero { padding: 62px 0 56px; }
 
-      section {
-        padding: 56px 0;
-      }
+      section { padding: 56px 0; }
 
       .project-header {
         flex-direction: column;
@@ -638,7 +553,7 @@
       <div class="navbar-links">
         <a href="#about">About</a>
         <a href="#research">Research</a>
-        <a href="#projects">Projects</a>
+        <a href="#work">Selected Work</a>
         <a href="#education">Education</a>
         <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
@@ -650,20 +565,23 @@
   <header class="hero" id="home">
     <div class="container hero-grid">
       <div>
-        <p class="eyebrow">AI Engineering · Interdisciplinary Research</p>
+        <p class="eyebrow">
+          Software Engineering · Software Testing · AI for Software Engineering
+        </p>
 
         <h1>Jiayue Zhou</h1>
 
         <p class="hero-title">
-          AI Application Developer and Prospective Researcher
+          Software Engineer and Prospective Researcher
         </p>
 
         <p class="hero-description">
-          I am a computer science graduate from Virginia Tech with experience
-          in AI application development, machine learning, multimodal systems,
-          backend engineering, and research-oriented technical projects. I am
-          interested in applied and interdisciplinary AI research that connects
-          intelligent models and systems with real-world problems.
+          I am a software engineer and prospective researcher interested in
+          software testing, AI for Software Engineering, and software
+          reliability. My background spans software test automation, AI
+          application development, backend systems, and machine learning. I am
+          particularly interested in building intelligent and reliable software
+          testing systems.
         </p>
 
         <div class="hero-actions">
@@ -711,52 +629,44 @@
             <p>
               I received my Master of Engineering in Computer Science and
               Applications from Virginia Tech, where I graduated with a GPA of
-              3.90. I earned my Bachelor of Engineering in Computer Science
-              from Hangzhou Dianzi University, where I studied in the Honors
-              College.
+              3.90. I earned my Bachelor of Engineering in Computer Science from
+              Hangzhou Dianzi University, where I studied in the Honors College.
             </p>
 
             <p>
-              My background combines software engineering, AI application
-              development, machine learning projects, multimodal systems, and
-              backend infrastructure. I currently work on AI-powered
-              applications and multi-stage generation pipelines, including API
-              development, databases, asynchronous processing, testing, and
-              deployment.
+              My professional background combines software testing, test
+              automation, backend engineering, and AI application development.
+              At Pax Technology, I worked on automated testing for Android
+              payment applications and Python-based regression testing
+              workflows. In my current work, I develop AI-powered applications,
+              backend services, APIs, and asynchronous generation pipelines.
             </p>
 
             <p>
-              My academic project experience includes visual question
-              answering, neural networks, mathematical modeling, optimization,
-              literature-based research, and technical report writing.
+              These experiences have led me to become especially interested in
+              software testing and dependable software systems. I am interested
+              in how runtime information, program analysis, and AI agents can be
+              combined to better understand, diagnose, and prevent unreliable
+              software behavior.
             </p>
 
             <p>
-              I am broadly interested in applied and interdisciplinary AI
-              research. I enjoy connecting ideas across different technical and
-              application domains, building experimental systems, and exploring
-              how AI can interact with people, environments, devices, and
-              real-world processes.
-            </p>
-
-            <p>
-              I value independent learning, careful implementation,
-              reproducibility, collaboration, and academic integrity. I am
-              currently exploring research assistant, research internship,
-              visiting student, and future PhD opportunities.
+              I am currently seeking opportunities to strengthen my research
+              training through faculty-guided research and future graduate
+              study.
             </p>
           </div>
 
           <aside class="focus-card">
-            <h3>What I Bring</h3>
+            <h3>Background</h3>
 
             <ul class="focus-list">
-              <li>Strong Python and software engineering experience</li>
-              <li>AI application and backend system development</li>
-              <li>Multimodal and machine learning project experience</li>
+              <li>Software testing and test automation</li>
+              <li>Python and software engineering</li>
+              <li>AI application and LLM system development</li>
+              <li>Android and GUI-oriented testing</li>
+              <li>Backend and distributed application development</li>
               <li>Experimental implementation and prototyping</li>
-              <li>Broad interdisciplinary curiosity</li>
-              <li>Self-directed and responsible working style</li>
             </ul>
           </aside>
         </div>
@@ -765,65 +675,102 @@
 
     <section id="research">
       <div class="container">
-        <h2 class="section-heading">Research Themes</h2>
+        <h2 class="section-heading">Research Interests</h2>
 
         <p class="section-intro">
-          My interests are evolving around three broad themes. These themes
-          reflect the kinds of problems I would like to explore rather than a
-          claim of established expertise in every area.
+          My current interests lie at the intersection of software testing,
+          software reliability, and AI-assisted software engineering.
         </p>
 
         <div class="theme-grid">
           <article class="theme-card">
             <span class="theme-number">01</span>
 
-            <h3>Intelligent Models and Multimodal AI</h3>
+            <h3>Software Testing & Analysis</h3>
 
             <p>
-              Generative models, multimodal learning, computer vision, language
-              models, spatial reasoning, world representations, and systems
-              that integrate information across multiple modalities.
+              Software testing, flaky tests, test reliability, automated
+              diagnosis and repair, and testing of Web and mobile applications.
             </p>
           </article>
 
           <article class="theme-card">
             <span class="theme-number">02</span>
 
-            <h3>Embodied, Spatial, and Edge Intelligence</h3>
+            <h3>AI for Software Engineering</h3>
 
             <p>
-              Embodied AI, robotics, world models, physical AI, edge
-              intelligence, neuromorphic computing, and intelligent systems
-              that perceive or operate in physical environments.
+              LLMs and AI agents for software testing, debugging, test
+              generation, program analysis, and reliable software development.
             </p>
           </article>
 
           <article class="theme-card">
             <span class="theme-number">03</span>
 
-            <h3>Applied and Human-Centered AI Systems</h3>
+            <h3>Reliable Intelligent & Interactive Systems</h3>
 
             <p>
-              AI systems for education and other real-world domains, including
-              human–AI interaction, reliable AI pipelines, evaluation,
-              experimental platforms, and research prototyping.
+              Testing and reliability of AI-enabled, interactive,
+              cyber-physical, and embodied systems, including GUI and physical
+              UI testing.
             </p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="projects">
+    <section id="work">
       <div class="container">
-       <h2 class="section-heading">Selected AI and Technical Projects</h2>
+        <h2 class="section-heading">Selected Work</h2>
 
         <p class="section-intro">
-          Selected projects demonstrating my experience in AI systems,
-          multimodal learning, model implementation, and technical
-          prototyping.
+          Selected work reflecting my background in software testing, AI
+          systems, and software engineering.
         </p>
 
         <div class="project-grid">
+          <article class="project-card">
+            <div class="project-header">
+              <h3>Android Payment Application Test Automation</h3>
+
+              <span class="project-date">
+                October 2023 – January 2026
+              </span>
+            </div>
+
+            <p class="project-summary">
+              Industry test automation work for Android-based payment
+              applications, focused on regression testing, framework
+              maintainability, and execution efficiency.
+            </p>
+
+            <ul class="project-list">
+              <li>
+                Developed and maintained automated test cases for Android
+                payment applications using Python-based testing tools.
+              </li>
+
+              <li>
+                Improved regression testing workflows and automation framework
+                maintainability.
+              </li>
+
+              <li>
+                Worked with repeated execution, debugging, application state,
+                and device-oriented software testing in an industrial setting.
+              </li>
+            </ul>
+
+            <div class="tag-list">
+              <span class="tag">Software Testing</span>
+              <span class="tag">Test Automation</span>
+              <span class="tag">Python</span>
+              <span class="tag">Android</span>
+              <span class="tag">Regression Testing</span>
+            </div>
+          </article>
+
           <article class="project-card">
             <div class="project-header">
               <h3>EduOnAI: AI-Powered Course Generation System</h3>
@@ -839,8 +786,8 @@
             <ul class="project-list">
               <li>
                 Built a multi-stage LLM workflow for requirement analysis,
-                curriculum generation, lesson writing, CourseSpec assembly, and
-                course asset rendering.
+                curriculum generation, lesson writing, and course asset
+                generation.
               </li>
 
               <li>
@@ -849,15 +796,15 @@
               </li>
 
               <li>
-                Developed asynchronous generation pipelines with Redis and RQ
-                for long-running AI generation and rendering tasks.
+                Developed asynchronous processing pipelines using Redis and RQ.
               </li>
 
               <li>
-                Added automated tests with pytest to improve reliability,
-                maintainability, and reproducibility.
+                Added automated tests with pytest to improve reliability and
+                maintainability.
               </li>
             </ul>
+
             <div class="project-links">
               <a
                 href="https://eduonai.com"
@@ -867,8 +814,9 @@
                 Visit EduOnAI Website →
               </a>
             </div>
+
             <div class="tag-list">
-              <span class="tag">LLM Pipelines</span>
+              <span class="tag">LLM Systems</span>
               <span class="tag">FastAPI</span>
               <span class="tag">PostgreSQL</span>
               <span class="tag">Redis/RQ</span>
@@ -876,41 +824,21 @@
               <span class="tag">pytest</span>
             </div>
           </article>
+        </div>
 
-          <article class="project-card">
-            <div class="project-header">
+        <details class="additional-projects">
+          <summary>Earlier AI and Engineering Projects</summary>
+
+          <div class="additional-projects-content">
+            <article class="compact-project">
               <h3>Visual Question Answering Application</h3>
-              <span class="project-date">December 2019 – June 2020</span>
-            </div>
 
-            <p class="project-summary">
-              A multimodal deep learning application that answers
-              natural-language questions based on images from the CLEVR
-              dataset.
-            </p>
+              <p>
+                Developed a multimodal deep learning application using PyTorch,
+                ResNet, GloVe, and LSTM to answer natural-language questions
+                about images from the CLEVR dataset.
+              </p>
 
-            <ul class="project-list">
-              <li>
-                Developed a multimodal model using PyTorch.
-              </li>
-
-              <li>
-                Used ResNet for visual feature extraction and GloVe with LSTM
-                for natural-language representation.
-              </li>
-
-              <li>
-                Trained and evaluated the model on GPU-accelerated Linux
-                servers, achieving 96.95% accuracy in the target project
-                evaluation setting.
-              </li>
-
-              <li>
-                Built an interactive web demonstration using Flask and HTML.
-              </li>
-            </ul>
-
-            <div class="project-links">
               <a
                 href="https://github.com/Jiayue-Zhou/VQA-System-with-MAC-and-CLEVR"
                 target="_blank"
@@ -918,47 +846,19 @@
               >
                 View GitHub Repository →
               </a>
-            </div>
+            </article>
 
-            <div class="tag-list">
-              <span class="tag">PyTorch</span>
-              <span class="tag">Multimodal Learning</span>
-              <span class="tag">ResNet</span>
-              <span class="tag">LSTM</span>
-              <span class="tag">GloVe</span>
-              <span class="tag">Flask</span>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-header">
+            <article class="compact-project">
               <h3>
-                Breast Cancer Subtype Classification with Optimized Neural
-                Networks
+                Breast Cancer Subtype Classification with Optimized Neural Networks
               </h3>
 
-              <span class="project-date">Spring 2022</span>
-            </div>
+              <p>
+                Participated in a graduate machine learning research project on
+                subtype classification from gene-expression data and implemented
+                a Moth-Flame Optimization component.
+              </p>
 
-            <p class="project-summary">
-              A graduate machine learning course research project on breast
-              cancer subtype classification using optimized backpropagation
-              neural networks and gene-expression data.
-            </p>
-
-            <ul class="project-list">
-              <li>
-                Participated in a team research project on breast cancer
-                subtype classification.
-              </li>
-
-              <li>
-                Implemented the Moth-Flame Optimization component for neural
-                network parameter initialization.
-              </li>
-            </ul>
-
-            <div class="project-links">
               <a
                 href="https://jiayue-zhou.github.io/jiayue_personal_page/material/ML_final_report.pdf"
                 target="_blank"
@@ -966,28 +866,15 @@
               >
                 Read Course Paper →
               </a>
-            </div>
+            </article>
 
-            <div class="tag-list">
-              <span class="tag">Neural Networks</span>
-              <span class="tag">Optimization</span>
-              <span class="tag">TensorFlow</span>
-              <span class="tag">Keras</span>
-            </div>
-          </article>
-        </div>
-
-        <details class="additional-projects">
-          <summary>Additional Engineering Projects</summary>
-
-          <div class="additional-projects-content">
             <article class="compact-project">
               <h3>Decentralized Patient Record System</h3>
 
               <p>
                 Built an Ethereum-based patient record system using Solidity,
-                Web3.py, Python, and a web interface. Integrated a machine
-                learning component for COVID-related outcome prediction.
+                Web3.py, Python, and a web interface, with an additional machine
+                learning component.
               </p>
 
               <a
@@ -1004,8 +891,7 @@
 
               <p>
                 Developed a student ridesharing web platform with Vue.js,
-                Spring Boot, MySQL, user authentication, and email
-                verification.
+                Spring Boot, MySQL, user authentication, and email verification.
               </p>
 
               <a
@@ -1049,9 +935,7 @@
                 Virginia Polytechnic Institute and State University
               </p>
 
-              <p>
-                Falls Church, Virginia · GPA: 3.90/4.00
-              </p>
+              <p>Falls Church, Virginia · GPA: 3.90/4.00</p>
             </div>
           </article>
 
@@ -1067,9 +951,7 @@
                 Hangzhou Dianzi University
               </p>
 
-              <p>
-                Hangzhou, China · GPA: 3.59/4.00 · Honors College
-              </p>
+              <p>Hangzhou, China · GPA: 3.59/4.00 · Honors College</p>
             </div>
           </article>
         </div>
@@ -1087,7 +969,7 @@
             </div>
 
             <div class="timeline-content">
-              <h3>Computer Programmer</h3>
+              <h3>Computer Programmer (AI & Backend Engineering)</h3>
 
               <p class="organization">
                 Washon MedData · Vienna, Virginia
@@ -1129,9 +1011,9 @@
             <div class="timeline-content">
               <h3>Software Engineer Intern</h3>
 
-            <p class="organization">
-              Amotions, Inc. · Burlingame, California (Remote)
-            </p>
+              <p class="organization">
+                Amotions, Inc. · Burlingame, California (Remote)
+              </p>
 
               <p>
                 Built user-facing product features using Next.js, Chakra UI,
@@ -1155,30 +1037,30 @@
           </article>
 
           <article class="skill-card">
-            <h3>Machine Learning and AI</h3>
+            <h3>Software Testing & Engineering</h3>
 
             <p>
-              PyTorch, TensorFlow, Keras, scikit-learn, ResNet, LSTM,
-              multimodal learning, OpenAI API, and LLM pipelines
+              Test automation, regression testing, pytest, Android testing,
+              debugging, Git, Linux, Docker, REST APIs, and reproducible
+              software development
             </p>
           </article>
 
           <article class="skill-card">
-            <h3>Backend and Data Systems</h3>
+            <h3>AI & Machine Learning</h3>
 
             <p>
-              FastAPI, PostgreSQL, Supabase, MySQL, Redis, RQ, REST APIs,
-              database schema design, and asynchronous processing
+              PyTorch, TensorFlow, Keras, scikit-learn, multimodal learning,
+              OpenAI API, LLM pipelines, and AI application development
             </p>
           </article>
 
           <article class="skill-card">
-            <h3>Engineering and Research Prototyping</h3>
+            <h3>Backend & Data Systems</h3>
 
             <p>
-              Git, Linux, Docker, pytest, model implementation, experimental
-              prototyping, automated testing, and reproducible software
-              development
+              FastAPI, PostgreSQL, Supabase, MySQL, Redis, RQ, database schema
+              design, asynchronous processing, and deployment
             </p>
           </article>
         </div>
@@ -1205,9 +1087,9 @@
         <h2 class="section-heading">Get in Touch</h2>
 
         <p class="section-intro">
-          I am open to conversations about research assistantships, research
-          internships, visiting student opportunities, future PhD study, and
-          interdisciplinary AI projects.
+          I am interested in research opportunities in software engineering,
+          software testing, AI for Software Engineering, and software
+          reliability.
         </p>
 
         <div class="hero-actions center-actions">
@@ -1230,9 +1112,7 @@
 
   <footer>
     <div class="container">
-      <p>
-        © <span id="current-year"></span> Jiayue Zhou
-      </p>
+      <p>© <span id="current-year"></span> Jiayue Zhou</p>
     </div>
   </footer>
 
